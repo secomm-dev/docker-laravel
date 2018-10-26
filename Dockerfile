@@ -7,7 +7,7 @@ RUN yum -y --setopt=tsflags=nodocs install httpd wget mysql vi crontabs unzip su
            gcc gcc-c++ make openssl-devel libpng libpng-devel autogen libtool nasm \
  && yum install -y http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-1.0-14.ius.centos7.noarch.rpm \
  && yum -y install php71u php71u-common php71u-gd php71u-phar php71u-xml php71u-cli php71u-mbstring \
-           php71u-tokenizer php71u-openssl php71u-pdo php71u-pecl-imagick php71u-pecl-redis \
+           php71u-json php71u-tokenizer php71u-openssl php71u-pdo php71u-pecl-imagick php71u-pecl-redis \
 # Clean CentOS 7
  && yum clean all && rm -rf /var/cache/yum/* \
 # Create sudo user
