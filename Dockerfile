@@ -23,7 +23,7 @@ RUN yum -y --setopt=tsflags=nodocs install httpd wget mysql vi crontabs unzip su
  && sed -i 's/post_max_size = 8M/post_max_size = 256M/g' /etc/php.ini \
  && sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 256M/g' /etc/php.ini \
  && sed -i 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini \
- && sed -i 's/IncludeOptional conf.d/*.conf/IncludeOptional conf.d/000-default.conf/g' /etc/httpd/conf/httpd.conf
+ && sed -i 's/IncludeOptional conf\.d\/\*\.conf/IncludeOptional conf\.d\/000\-default\.conf/g' /etc/httpd/conf/httpd.conf
 # Config apache
 COPY conf/httpd.conf /etc/httpd/conf/httpd.conf
 RUN echo 'extension=pdo_mysql.so' >> /etc/php.d/20-pdo.ini
